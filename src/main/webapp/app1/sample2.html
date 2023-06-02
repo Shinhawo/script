@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	// 변수의 선언과 초기화
+	
+	// 변수의 선언
+	// 변수를 선언하고 초기화화지 않으면 해당 변수의 타입은 undefined 타입이다.
+	// undefined타입의 변수는 undefined값을 가진다.
+	
+	// var 키워드를 사용해서 선언한 변수의 스코프는 함수이다.
+	// var 키워드를 사용해서 선언한 변수의 호이스팅된다.
+	var a;
+	var b;
+	var c;
+	console.log(a,b,c);
+	
+	// let 키워드를 사용해서 선언한 변수의 스코프는 블록이다.
+	// let 키워드를 사용해서 선언한 변수는 호이스팅 되지 않는다. 
+	let x;
+	let y;
+	let z;
+	console.log(x,y,z);
+	
+	// const 키워드를 사용해서 선언한 변수는 값을 변경할 수 없다.(상수)
+	const pi = 3.14;
+	console.log(pi);
+	
+	// 변수의 초기화
+	// 변수에 값을 넣기 전까지는 undefined 타입, 값이 입력되야 타입이 결정됨
+	a = 10;
+	b = 2.7;
+	c = "신하원최고";
+	
+	x = true;
+	y = null;
+	z = 'hello';
+	
+	console.log(typeof(a), a);
+	console.log(typeof(b), b);
+	console.log(typeof(c), c);
+	console.log(typeof(x), x);
+	console.log(typeof(y), y);
+	console.log(typeof(z), z);
+</script>
+</body>
+</html>

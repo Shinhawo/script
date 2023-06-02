@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	// javascript의 반복문
+	// for문, while문, do~while문
+	
+	/*
+		for (초기식; 조건식; 증감식){
+			수행문;
+			수행문;
+		}
+	*/
+	
+	for (let index = 1; index <= 10; index++){
+		
+		console.log(index);
+		if(index%2 === 1){
+			console.log("메")		
+		} else if(index%2 === 0){
+			console.log("롱")		
+		}
+	}
+	
+	/*
+		for (key in 객체) {
+			// key에는 객체의 key값이 차례대로 대입된다.
+			// id, password, name, age
+		}
+	
+		for (index in 배열) {
+			// index에는 배열의 index값이 0부터 차례대로 대입된다.
+		}
+	*/
+	let student = {id:"hownu080", password:'hawon', name:"신하원", age:26};
+	for(let key in student) {
+		console.log('student 객체의 key : ',key);
+		console.log('student 객체의 value : ', student[key]);
+	}
+	
+	// 배열리터럴을 이용해서 자바스크립트 배열 생성하기
+	let names = ["하","원","최","고"];
+	for (let index in names){
+		console.log(index, names[index]);
+	}
+	
+	/*
+		for (변수 of 배열){
+			// 변수에는 배열의 0번째부터 차례대로 배열의 값이 저장된다.
+		}
+	*/
+	for (let name of names){
+		console.log(name);
+	}
+	
+	// 성적배열을 이용해서 총점과 평균 계산하기
+	let scores = [100, 80, 80, 50, 70, 70, 100];
+	let totalScore = 0;
+	for (let score of scores){
+		totalScore += score;
+	}
+	let average = totalScore/scores.length;
+	console.log("총점 : ", totalScore);
+	console.log("평균 : ", average);
+	
+	
+</script>
+</body>
+</html>

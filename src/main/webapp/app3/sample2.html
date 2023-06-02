@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div{
+		margin-top: 16px;
+		padding : 16px;
+		border: 1px solid black;
+	}
+</style>
+</head>
+<body>
+	<h1>html 컨텐츠 변경, 추가, 삭제</h1>
+	
+	<h3>
+		html 컨텐츠 추가하기 
+		<button id="btn-1" onclick="fn1()">추가</button>
+		<button id="btn-2" onclick="fn2()">추가</button>
+	</h3>
+	<div id="box-1"></div>
+	
+	<h3>
+		html 컨텐츠 삭제하기 
+		<button id="btn-3" onclick="fn3()">첫번째 자식 엘리먼트 삭제</button>
+		<button id="btn-4" onclick="fn4()">마지막 자식 엘리먼트 삭제</button>
+		<button id="btn-5" onclick="fn5()">모든 자식 엘리먼트 삭제</button>
+	</h3>
+	<div id="box-2">
+		<p>첫번째 내용입니다옹.</p>
+		<p>두번째 내용입니다옹.</p>
+		<p>세번째 내용입니다옹.</p>
+		<p>네번째 내용입니다옹.</p>
+		<p>다섯번째 내용입니다옹.</p>
+	</div>
+	
+	<h3>
+		html 컨텐츠 변경하기 
+		<button id="btn-6" onclick="fn6()">첫번째 야로 변경</button>
+		<button id="btn-7" onclick="fn7()">두번째 야로 변경</button>
+		<button id="btn-8" onclick="fn8()">모든 야로 변경</button>
+	</h3>
+	<div id="box-3">
+		<p>야옹</p>
+		<p>야옹</p>
+		<p>야옹</p>
+	</div>
+	
+<script type="text/javascript">
+	function fn1() {
+		let content = `<p>내용입니다.</p>`;			// 텍스트 형태의 HTML 컨텐츠
+												    // -> innerHTML()
+		let box1 = document.getElementById("box-1");
+		// += -> 계속 추가 가능. =은 한번만 됨
+		box1.innerHTML += content;
+	}
+	
+	function fn2() {
+		// p 엘리먼트를 생성함					   // 엘리먼트 그자체 -> appendChild()	
+		let element = document.createElement("p"); // <p></p>
+		element.textContent = '새 내용입니다.';    // <p>새 내용입니다.</p>
+		
+		let box1 = document.getElementById("box-1");
+		box1.appendChild(element);
+	}
+	
+	function fn3() {
+		// id="box-2"인 엘리먼트를 선택한다.
+		let box2 = document.getElementById("box-2");
+		// 위에서 선택한 엘리먼트의 자식 엘리먼트 중에서 첫번째 자식 엘리먼트를 조회한다.
+		let element = box2.firstElementChild;
+		// 위에서 선택한 엘리먼트를 삭제한다.
+		element.remove(); 
+	}
+	
+	function fn4() {
+		// div의 마지막 자식을 선택해야 계속 마지막 야로 삭제 가능
+		
+		// 1. id = "box-2"인 엘리먼트를 선택
+		let box2 = document.getElementById("box-2");
+		// 2. 선택된 엘리먼트의 자식 엘리먼트 중 마지막 자식 엘리먼트 조회
+		let element = box2.lastElementChild;
+		// 3. 처형.
+		element.remove();
+	}
+	
+	function fn5() {
+		let box2 = document.getElementById("box-2");
+		box2.innerHTML = "";
+	}
+	
+	function fn6() {
+		// 1. id = "box-2"인 엘리먼트를 선택
+		let box3 = document.getElementById("box-3");
+		// 2. 선택된 엘리먼트의 자식 엘리먼트 중 마지막 자식 엘리먼트 조회
+		let element = box3.firstElementChild;
+		element.innerHTML = "<p>멍멍</p>"
+	}
+
+	function fn7() {
+		// 1. id = "box-2"인 엘리먼트를 선택
+		let box3 = document.getElementById("box-3");
+		// 2. 선택된 엘리먼트의 자식 엘리먼트 중 마지막 자식 엘리먼트 조회
+		box3.document.querySelectorAll("p")[1].textContent = "멍멍"
+		
+		let elements = document.querySelectorALl("div[id='box-3']")
+		elements.forEach(function(el, index){
+				if(index == 1){
+					
+				}
+			});
+	}
+	
+	function fn8() {
+		// 1. id = "box-2"인 엘리먼트를 선택
+		let box3 = document.getElementById("box-3");
+		
+		box3.innerHTML = "<p>멍멍</p>";
+	}
+	
+	
+</script>
+</body>
+</html>

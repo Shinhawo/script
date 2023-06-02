@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	// 자바스크립트의 리터럴
+	
+	// 숫자 리터럴
+	let a = 10;
+	let b = 12.345;
+	
+	// 문자 리터럴
+	let c = "신하원";
+	let d = '최고';
+	let e =  `
+		안녕하세요 
+		이건 숫자 1
+		옆의 기호를 
+		써서 작성했어요.
+	`
+	console.log(a);
+	console.log(b);
+	console.log(c);
+	console.log(d);
+	console.log(typeof(e), e);
+	
+	// 불린 리터럴
+	let f = false;
+	let g = true;
+	
+	// 널 리터럴
+	let h = null;
+	
+	// undefined 리터럴
+	let i = undefined;
+	
+	// 배열 리터럴 : 배열안의 값이 달라도 상관없다. 크기를 미리 정하지 않아도 된다.
+	//               크기를 변경할 수 있다.
+	// 자바의 ArrayList와 비슷하다
+	let j = [10,20,30];
+	let k = ["신","하","원", 100, "점"];
+	let l = ["신하원" , 100, "점","java개발자", true]
+	
+	console.log(f);
+	console.log(g);
+	console.log(h);
+	console.log(i);
+	console.log(j);
+	console.log(k);
+	console.log(typeof(l), l);
+	
+	// 객체 리터럴 
+	// 'name : value'(프라퍼티)의 형식으로 무언가를 담고 있는 것. 
+	// 설계도를 만들지 않는다.
+	// 자바의 Map과 비슷하다.
+	let m = {name:"신하원", dept:"일본어과", grade:1, score:4.5, passed:true};
+	console.log(typeof(m), m);
+	
+	// 함수 리터럴
+	function n() {
+		// 수행문;
+		// 수행문;
+	}
+	console.log(typeof(n), n);
+	
+</script>
+</body>
+</html>

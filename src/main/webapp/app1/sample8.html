@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	// javascript의 함수
+	
+	// 함수 선언문으로 함수를 정의하고 실행하기
+	function sum(number1, number2){
+		let total = number1 + number2;
+		console.log("결과값 : ", total);
+	}
+	
+	sum(10, 20);
+	sum(100, 40);
+	
+	// 함수 표현식으로 함수를 정의하고 실행하기
+	let multiply = function(number1, number2){
+		let result = number1*number2
+		console.log("결과값 : ", result)
+	}
+	multiply(10,20);
+	multiply(29,54);
+	
+	// 함수 선언문과 함수 표현식으로 정의한 함수의 차이
+	/*
+		함수 호이스팅
+			- 함수 선언문으로 함수를 정의하면, 함수가 정의되기 이전에 함수 호출이 
+			  가능하다.
+			- 함수 선언문의 경우, 함수 선언 위치와 상관없이 코드내의 어느 곳에서든지 
+			  호출이 가능하다.
+			- 함수 선언문으로 정의된 함수는 자바스크립트가 로딩되는 시점에 바로 
+			  초기화와 할당이 이루어진다.
+		
+		test();   // 함수 선언 이전에 함수를 호출하는 거싱 가능하다. 오류 아님.
+			  
+		function test() {
+			수행문;
+			수행문;
+		}
+		
+		함수 선언문으로 정의된 함수는 코드내의 어느 위치에서나 그 함수를 실행할 수 있다.
+		함수 표현식으로 정의된 함수는 함수를 변수에 할당한 이후에만 그 함수를 실행할 수 있다.
+	*/
+	
+	test1();   // -> 실행됨 
+//	test2();      -> 오류발생 (Cannot access 'test2' before initialization)
+	
+	function test1(){
+		console.log("함수 선언문 실행됨");
+	}
+	
+	let test2 = function() {
+		console.log("함수 표현식 실행됨")
+	}
+	
+
+</script>
+</body>
+</html>

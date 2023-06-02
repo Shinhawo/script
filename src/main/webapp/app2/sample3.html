@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Location 객체 실습하기</h1>
+	<div>
+		<button onclick="fn1()">현재 URL 조회하기</button>
+		<button onclick="fn2()">URL 변경하기</button>
+	</div>
+	
+	<div>
+		<input type="text" id="url-field" placeholder="url을 입력하세요"/>
+		<button onclick="fn3()">URL 변경하기</button>
+	</div>
+	
+<script type="text/javascript">
+	function fn1() {
+		// 현재 주소창의 URL 조회하기
+		let url = location.href;
+		alert(url);
+	}
+
+	function fn2() {
+		// 현재 주소창의 URL 변경하기
+		location.href = "http://www.naver.com";
+	}
+	
+	function fn3() {
+		// 입력필드의 입력값 읽어오기
+		let urlText = document.querySelector("#url-field").value;
+		if (urlText == ""){
+			alert("url은 필수입력값 입니다옹");
+			// url 입력창에 focus
+			document.querySelector("#url-field").focus();
+			return;
+		}
+		
+		if (urlText.startsWith("http://")){
+			location.href = urlText; 
+		} else {
+			location.href = "http://" + urlText; 
+		}
+	}
+	
+</script>
+</body>
+</html>

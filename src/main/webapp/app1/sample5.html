@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	// javascript의 데이터타입
+	// 기본타입(primitive type)
+	//	    boolea, number, string, undefined, symbol
+	
+	// 객체타입(object type)
+	//		object
+
+	
+	// javascript의 연산자
+	// 산술연산자 : + - * / %
+	// 수는 모두 실수로 생각하기 때문에 정수/정수를 해도 소수가 나올 수 있다.
+	let a = 10;
+	let b = 4;
+	console.log(a/b);    // 2.5
+	
+	// 증감연산자 : ++ --
+	let c = 10;
+	let d = 10;
+	let e = ++c;
+	let f = d++;
+	console.log(c, e);   // 11, 11 출력 c(10)가 먼저 ++ 되고 e에 대입된다.
+	console.log(d, f);   // 11, 10 출력 d(10)가 먼저 f에 대입되고 d는 ++ 된다.
+	
+	// 대입연산자 : = += -= *= /= %=
+	
+	// 비교연산자 : == === != !== > >= < <=
+	// ==  : 값이 같으면 true다.
+	// === : 값도 같고, 타입도 같으면 true다.
+	// !=  : 값이 다르면 true다.
+	// !== : 값도 다르거나 타입이 다르면 true다.
+	console.log("5 == '5'", 5 == '5');    // true, 타입은 다르지만, 묵시적 현변환 후 값이 같음
+	console.log("5 === '5'", 5 === '5');  // false, 위와같은 것을 방지하기 위해 항상 ===을 쓴닷닷닷
+	
+	console.log("5 != '6'", 5 != '6');    // true, 값이 다르다.
+	console.log("5 != 5", 5 != 5);        // false, 값이 같다.
+	console.log("5 != '5'", 5 != '5');    // false, 값이 같다.
+	
+	
+	console.log("5 !== 6", 5 !== 6 );     // true, 값이 다르다.
+	console.log("5 !== '5'", 5 !== '5');  // true, 타입이 다르다.
+
+	// 논리연산자 : && || !
+	// &&와 ||연산의 결과가 true나 false가 아닐 수도 있다.
+	
+		console.log("javascript에서 true로 판정되는 것");
+		console.log(true);
+		console.log(!!100); // !! 부정의 부정
+		console.log(!!'가나다라');
+		console.log(!![10,20,30]);
+		console.log(!!{});
+		console.log(!!{n :"홍길동", p:"zxcv1234"});
+		
+		console.log("javascript에서 false로 판정되는 것");
+		console.log(false);
+		console.log(!!0);
+		console.log(!!'');
+		console.log(!!null);
+		console.log(!!undefined);
+		console.log(!!NaN);
+	
+	// 삼항연산자
+	// 		조건식 ? 표현식1 : 표현식2
+	//          조건식이 true로 판정되면 표현식1의 값이 최종 연산결과다.
+	//			조건식이 false로 판정되면 표현식2의 값이 최종 연산결과다.
+	
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
